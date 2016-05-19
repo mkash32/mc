@@ -96,7 +96,7 @@ func putTargetStream(urlStr string, reader io.Reader, size int64) (int64, *probe
 	return putTargetStreamFromAlias(alias, urlStrFull, reader, size, nil)
 }
 
-// copyTargetStreamFromAlias copies to URL from source.
+// copySourceStreamFromAlias copies to URL from source.
 func copySourceStreamFromAlias(alias string, urlStr string, source string, size int64, progress io.Reader) *probe.Error {
 	targetClnt, err := newClientFromAlias(alias, urlStr)
 	if err != nil {
